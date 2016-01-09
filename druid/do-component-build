@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -ex
+
+. `dirname $0`/bigtop.bom
+
+
+mvn -Dhadoop.compile.version=$HADOOP_VERSION -DskipTests clean package "$@"
+
